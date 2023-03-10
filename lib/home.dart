@@ -10,6 +10,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+automaticallyImplyLeading: false,
         title: const Text('Home',style: TextStyle(color: Colors.black),),
         actions:const [
            Padding(
@@ -30,8 +31,24 @@ class _HomeState extends State<Home> {
                   const Color(0xff9E92E2).withOpacity(.5)
                 ],
               )),
-          child: Stack(
+          child: Column(
             children: [
+           const SizedBox(height: 70,),
+
+               Column(
+                 children: const[
+                   Text('Congratulations!',style: TextStyle(
+                     color: Color(0xff78258B),fontSize: 30,fontWeight: FontWeight.bold,
+                   ),
+                   ),
+                   const SizedBox(height: 20,),
+                   Text('Name',style: TextStyle(
+                     color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold,
+                   ),
+                   ),
+                 ],
+               ),
+              const SizedBox(height: 20,),
               Align(
                 alignment: Alignment.center,
                 child: Container(
